@@ -1,9 +1,10 @@
 import type { CSSProperties } from "react";
 import Reveal from "@/components/Reveal";
 import Rail from "@/components/Rail";
+import Hero from "@/components/Hero";
+import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 
-const v = (i: number) => ({ "--i": i } as CSSProperties);
 const ticker = ["Scroll-stopping reels", "Honest storytelling", "Planned to the frame", "Ads that bring inquiries", "Reports you can read"];
 const audience = [
   ["Clinics & healthcare", "sensitive topics, told with care"], ["Schools & coaching", "admissions, events, results"],
@@ -42,15 +43,7 @@ const monthly = ["A content calendar, approved before anything goes live", "Reel
 export default function Home() {
   return (
     <>
-      <section id="home" className="hero dk">
-        <p className="lbl o" style={v(0)}>Creative Tech Studio · CreativeFlow Studio</p>
-        <h1 className="d h1" style={v(1)}>We make content that people actually stop for.</h1>
-        <div className="cta" style={v(2)}>
-          <a className="btn" href="#services">Our services</a>
-          <a className="btn" href="#contact">Contact us</a>
-        </div>
-        <p className="lbl mut" style={{ ...v(3), marginTop: 40 }}>Open to new projects and good stories ↓</p>
-      </section>
+      <Hero />
 
       <div className="mq"><div>{[...ticker, ...ticker, ...ticker, ...ticker].map((t, i) => <span key={i}>{t} ✦</span>)}</div></div>
 
@@ -138,10 +131,7 @@ export default function Home() {
         <ContactForm />
       </section>
 
-      <footer className="ft dk">
-        <p className="d wm">MOONKALP</p>
-        <div><p className="mut">© 2026 MoonKalp · CreativeFlow Studio</p><a className="lbl" href="#home">Back to top ↑</a></div>
-      </footer>
+      <Footer />
     </>
   );
 }

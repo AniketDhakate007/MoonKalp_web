@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 const cols: [string, [string, string][]][] = [
-  ["Studio", [["About", "#about"], ["Built for", "#for"], ["The difference", "#why"]]],
+  ["Studio", [["About", "#about"], ["Built for", "#for"], ["The difference", "#why"], ["Team", "#team"]]],
   ["Services", ["Motion Graphics", "Video Production", "Social Media", "Meta Ads", "SEO", "Websites"].map((s) => [s, "#services"] as [string, string])],
   ["Work", [["Playground", "#playground"], ["Process", "#process"], ["Ways to work", "#ways"]]],
   ["Say hello", [["Contact", "#contact"]]],
